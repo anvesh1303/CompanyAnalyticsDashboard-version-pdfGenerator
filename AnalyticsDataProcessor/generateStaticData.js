@@ -28,7 +28,7 @@ sections.forEach(async (section) => {
       pageHeader: pageHeaderData
     };
 
-    fs.writeFileSync(path.join(__dirname, `../client/public/${section}.json`), JSON.stringify(data));
+    fs.writeFileSync(path.join(__dirname, `../AnalyticsDashboardUI/src/data/${section}.json`), JSON.stringify(data));
   } catch (error) {
     console.error('Error generating static data:', error);
   }
