@@ -1,0 +1,11 @@
+/* Styles for the page header container */
+.page-header {
+  padding: 20px; /* Padding around the header */
+  text-align: center; /* Center-align the header content */
+}
+
+/* Styles specifically for the h1 element inside the page header */
+.page-header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Font size for the main heading */
+}

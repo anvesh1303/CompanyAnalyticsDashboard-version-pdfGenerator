@@ -1,0 +1,28 @@
+/* Container for the custom legend */
+.custom-legend {
+  display: flex; /* Flex layout for alignment */
+  flex-direction: column; /* Stack items vertically */
+  padding: 10px; /* Padding around the legend items */
+  width: 60px; /* Width of the legend */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light grey border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for each legend item */
+.legend-item {
+  display: flex; /* Flex layout for alignment */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 4px; /* Space between items */
+}
+
+/* Style for the icon in the legend item */
+.legend-icon {
+  margin-right: 4px; /* Space after the icon */
+}
+
+/* Style for the text in the legend item */
+.legend-txt {
+  font-size: 8px; /* Small font size for legend text */
+  margin-left: 0px; /* Align text closely to the icon */
+}

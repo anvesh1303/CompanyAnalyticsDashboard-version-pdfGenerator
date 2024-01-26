@@ -1,0 +1,25 @@
+/* Styles for the overview table */
+.overview-table {
+  margin-top: 20px; /* Space above the table */
+  border: 1px solid #ddd; /* Light grey border for the table */
+}
+
+/* Common styles for table headers and cells */
+.overview-table th, .overview-table td {
+  border: 1px solid black; /* Black border for each cell */
+  padding: 10px; /* Padding inside each cell */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style for table header cells */
+tr>th {
+  background-color: rgb(150, 196, 235); /* Blue background for header cells */
+}
+
+/* Link styles within tables */
+a {
+  color: blue; /* Default link color */
+}
+a:hover {
+  color: rgb(13, 121, 121); /* Darker color on hover for better user interaction */
+}

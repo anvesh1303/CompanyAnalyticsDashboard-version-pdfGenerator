@@ -1,0 +1,68 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif; /* Standard font for the entire application */
+  color: #333; /* Default text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Main App container styling */
+.App {
+  margin: 0 auto; /* Center the app in the middle of the page */
+  max-width: 1200px; /* Max width for the App container */
+  padding: 20px; /* Padding around the entire App */
+  display: flex; /* Using flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center-align children horizontally */
+}
+
+/* Styling for containers wrapping tables */
+.table-container {
+  width: 100%; /* Ensure tables take full width */
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  color: #0056b3; /* Dark blue color for all heading elements */
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  width: 100%; /* Full width tables */
+}
+
+/* Table cell styles */
+th, td {
+  text-align: left; /* Left-align text in table headers and cells */
+  padding: 8px; /* Padding inside cells */
+}
+
+/* Alternate row styling for tables */
+tr {
+  background-color: #f2f2f2; /* Light grey background for every row */
+}
+
+/* Container for charts */
+.charts-container {
+  margin-top: 30px; /* Space above the chart container */
+  width: 100%; /* Full width for chart container */
+  display: flex; /* Using flexbox for layout */
+  flex-wrap: wrap; /* Allow chart items to wrap */
+  justify-content: space-around; /* Space items evenly */
+  align-items: center; /* Center-align items vertically */
+  gap: 20px; /* Gap between each chart item */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .charts-container {
+    flex-direction: column; /* Stack chart items vertically on small screens */
+    align-items: center; /* Center-align items */
+  }
+}
+
+/* Chart title styling */
+.chart-title {
+  margin-bottom: 10px; /* Space below the chart title */
+}

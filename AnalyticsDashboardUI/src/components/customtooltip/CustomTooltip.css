@@ -1,0 +1,22 @@
+/* Styles for custom tooltip container */
+.custom-tooltip {
+  background: #ffffff; /* White background */
+  border: 1px solid #dddddd; /* Light grey border */
+  padding: 10px; /* Padding inside the tooltip */
+  border-radius: 3px; /* Rounded corners */
+  box-shadow: 0px 0px 5px #aaaaaa; /* Subtle shadow for depth */
+  width: 100px; /* Fixed width, adjust as necessary */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Style for the label inside the tooltip */
+.custom-tooltip .label {
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: bold; /* Bold font for emphasis */
+  color: #333333; /* Dark grey color for readability */
+}
+
+/* Style for individual item texts in the tooltip */
+.custom-tooltip .item {
+  color: #666666; /* Lighter grey color for item texts */
+}

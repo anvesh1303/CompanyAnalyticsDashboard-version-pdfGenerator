@@ -1,0 +1,23 @@
+/* Container for the charts */
+.chart-container {
+  width: 45%; /* Adjust width as needed */
+  padding: 0 20px; /* Padding on left and right */
+  display: flex; /* Flex layout for alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100%; /* Full height of the container */
+  border: 1px solid black; /* Black border for the chart container */
+  padding-bottom: 30px; /* Padding at the bottom */
+  padding-top: 10px; /* Padding at the top */
+}
+
+/* Style for bars in bar charts */
+.recharts-bar-rectangle {
+  max-width: 100%; /* Prevent bars from overflowing */
+}
+
+/* Style for axis tick labels */
+.recharts-cartesian-axis-tick {
+  overflow: visible; /* Ensures labels are fully visible */
+}
