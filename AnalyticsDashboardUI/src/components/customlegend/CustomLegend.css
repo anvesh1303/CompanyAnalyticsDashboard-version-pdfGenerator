@@ -3,22 +3,25 @@
   display: flex; /* Flex layout for alignment */
   flex-direction: column; /* Stack items vertically */
   padding: 10px; /* Padding around the legend items */
-  width: 60px; /* Width of the legend */
+  width: 80px; /* Width of the legend */
   border-radius: 5px; /* Rounded corners */
   border: 1px solid #ddd; /* Light grey border */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: white;
 }
 
 /* Style for each legend item */
 .legend-item {
   display: flex; /* Flex layout for alignment */
-  align-items: center; /* Vertically align items */
+  justify-content: flex-start;
   margin-bottom: 4px; /* Space between items */
+  width: 80px;
 }
 
 /* Style for the icon in the legend item */
 .legend-icon {
-  margin-right: 4px; /* Space after the icon */
+   /* Space after the icon */
+  margin-right: 5px;
 }
 
 /* Style for the text in the legend item */

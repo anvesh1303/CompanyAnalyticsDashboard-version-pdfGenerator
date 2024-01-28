@@ -16,7 +16,7 @@ const CustomLegend = ({ payload }) => {
       {payload.map((entry, index) => (
         // Mapping each legend entry to a div with a colored rectangle and text
         <div key={`item-${index}`} className="legend-item">
-          <svg className="legend-icon" width="20" height="10">
+          <svg className="legend-icon" width="10" height="10">
             <rect fill={entry.color} width="10" height="10" />
           </svg>
           <span className='legend-txt'>{entry.value}</span>

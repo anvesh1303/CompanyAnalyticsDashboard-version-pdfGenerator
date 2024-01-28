@@ -29,11 +29,9 @@ const HeaderTable = ({ data }) => {
 
   // Function to render the table rows
   const renderTableRows = () => {
-    return data.map((row, index) => (
-      // Map each data object to a table row
+    return data.map((row, index) => (// Map each data object to a table row
       <tr key={index}>
-        {Object.values(row).map((cell, cellIndex) => (
-          // Map each value of the data object to a table cell
+        {Object.values(row).map((cell, cellIndex) => ( // Map each value of the data object to a table cell
           <td key={cellIndex}>{cell}</td>
         ))}
       </tr>
@@ -43,10 +41,10 @@ const HeaderTable = ({ data }) => {
   return (
     <table className="header-table">
       <thead>
-        {renderTableHeader()} {/* Render the table header */}
+        {renderTableHeader()}{/* Render the table header */}
       </thead>
       <tbody>
-        {renderTableRows()} {/* Render the table rows */}
+        {renderTableRows()}{/* Render the table rows */}
       </tbody>
     </table>
   );
