@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Company Analytics Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+This document serves as a comprehensive guide to the Company Analytics Dashboard. This web application is designed to present and interact with various organizational metrics, aiming to provide a simplified yet detailed view of company data for hypothetical clients.
 
-## Available Scripts
+## Project Overview
+The Company Analytics Dashboard is a web-based tool that transforms raw company data into an interactive and visually appealing report. This report aims to simplify the complexity of organizational data while maintaining depth and accuracy in insights.
 
-In the project directory, you can run:
+## Features and Functionalities
+•	Interactive Data Visualization: Dynamic and responsive data presentation using React.js and Recharts.
+•	Data Segmentation: Detailed insights into specific departments such as Sales, Marketing, and Customer Service.
+•	User-Friendly Interface: Easy navigation and understanding.
 
-### `npm start`
+## Interactive Functionality
+•	Homepage View: Showcases organizational data. Overview table includes clickable department names.
+•	Department View: Clicking on department names navigates to a page with specific data for that department.
+•	Home Navigation: "Entire Organization" in the header acts as a navigational link back to the homepage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Client Access Guide
+### Accessing the Dashboard
+### Client Access Instructions:
+1.	Download and Extract: Download and extract the provided zip file.
+2.	Open index.html: Located in the extracted build folder, open it in a web browser to start exploring the dashboard.
+3.	Offline Accessibility: Once extracted, the report is fully functional offline.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Navigating the Dashboard
+•	Homepage: Displays overall organization data.
+•	Department Data: Clickable department names in the overview table to see specific department data.
+•	Returning Home: Click "Entire Organization" in the page header to go back to the initial view from a department view.
 
-### `npm test`
+## Understanding the Views
+•	Homepage View:
+•	Displays overall organization data.
+•	Overview table with interactive department links.
+•	Company-wide charts for turnover and tenure comparison.
+•	Department View (e.g., Sales):
+•	Page header: "Entire Organization > Sales".
+•	Detailed view of department-specific data.
+•	Non-interactive overview table.
+•	Charts showing specific department data.
+•	"Entire Organization" in the header is a clickable link for easy navigation back to the homepage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tooltip Feature
+•	Functionality: Hover over data points in charts to view detailed information through a custom tooltip.
 
-### `npm run build`
+## Technical Implementation
+## Technologies Used
+•	React.js: Chosen for its efficiency in building dynamic user interfaces and its vast ecosystem, which provides tools and libraries that enhance development speed and application performance.
+•	Node.js: Used for backend data processing, leveraging its non-blocking I/O and event-driven architecture to handle multiple data transformation tasks efficiently.
+•	Recharts: A versatile charting library that seamlessly integrates with React, providing a wide range of customizable chart options that enhance data visualization.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Automated Data Pipeline
+The project includes an automated pipeline, implemented in Node.js, which processes CSV and TXT source data, converting them into a structured JSON format suitable for the React frontend. This pipeline automates data transformation, ensuring consistency and efficiency in handling the source data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Data Processing
+•	Automated Conversion: The Node.js/Express backend scripts read, process, transform the source data into JSON format and places the transformed data in the React application's src/data directory for direct utilization.
+•	Assumptions: The pipeline assumes consistent data structure and formats as provided, with departmental names and other key fields maintained for accurate data parsing and display.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Interactive Functionality
+•	Interactive elements like clickable links allow seamless navigation between different views or departmental information, enhancing user engagement and data exploration.
 
-### `npm run eject`
+## Output Format
+•	The output is a static HTML website, generated from the React application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development and Version Control
+### Git Workflow
+•	Implemented a structured Git branching strategy for efficient version control and feature integration:
+•	main branch for stable releases.
+•	develop branch for ongoing development.
+•	Feature-specific branches for new functionalities.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Testing Approach
+•	Focused on frontend testing, particularly for component rendering and interaction.
+•	Tests ensure the accuracy of data visualization and the integrity of user interface elements.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Documentation and Confidentiality
+•	Comprehensive documentation of code has been maintained throughout the project.
+•	Strict adherence to confidentiality guidelines, preventing any public distribution of assessment materials.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Conclusion
+The Company Analytics Dashboard is a testament to the effective application of modern web technologies in creating an accessible, informative, and client-friendly platform for data visualization. It caters to both technical and non-technical users, simplifying complex organizational data analysis.
 
-## Learn More
+For Support or Queries: k03n13@gmail.com
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://github.com/anvesh1303/CompanyAnalyticsDashBoard-1/assets/98427744/b4d53cf1-3cf3-45bd-8dd4-2e3e3663a56f)

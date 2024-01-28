@@ -10,6 +10,11 @@
   border: 1px solid black; /* Black border for the chart container */
   padding-bottom: 30px; /* Padding at the bottom */
   padding-top: 10px; /* Padding at the top */
+  
+}
+
+.chart-title{
+  font-weight: bold;
 }
 
 /* Style for bars in bar charts */
