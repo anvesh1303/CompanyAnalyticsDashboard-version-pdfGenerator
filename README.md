@@ -82,6 +82,3 @@ The Company Analytics Dashboard is a testament to the effective application of m
 
 For Support or Queries: k03n13@gmail.com
 
-![image](https://github.com/anvesh1303/CompanyAnalyticsDashBoard-1/assets/98427744/b4d53cf1-3cf3-45bd-8dd4-2e3e3663a56f)
-
-![image](https://github.com/anvesh1303/CompanyAnalyticsDashBoard-1/assets/98427744/ca32dcdb-50b2-487b-85ca-785ff23b9c08)
