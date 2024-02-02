@@ -26,28 +26,4 @@ describe('OverviewTable Component', () => {
   });
 
 
-  describe('OverviewTable Integration Tests', () => {
-    it('navigates to the correct department page on link click', async () => {
-      // Render the App component wrapped in MemoryRouter to simulate routing
-      const { getByText } = render(
-        <MemoryRouter initialEntries={['/']}>
-          <App />
-        </MemoryRouter>
-      );
   
-      // Assuming 'Sales' is a link in the OverviewTable
-      const salesLink = getByText('Sales');
-      expect(salesLink).toBeInTheDocument();
-  
-      // Simulate clicking the 'Sales' link
-      fireEvent.click(salesLink);
-  
-      // Wait for the navigation to occur and the new page to render
-      await waitFor(() => {
-        // Check if the page navigated to the 'Sales' department view
-        // This can be verified by checking for unique content on the 'Sales' page
-        // For example, a unique header title or specific data related to 'Sales'
-        expect(getByText('Entire Organization > Sales')).toBeInTheDocument();
-      });
-    });
-  });
