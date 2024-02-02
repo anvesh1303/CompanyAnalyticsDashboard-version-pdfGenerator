@@ -1,6 +1,6 @@
 import React from 'react';
 import './OverviewTable.css'; // Ensure this file exists and styles your table
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 /**
  * Component for displaying an overview table.
@@ -18,20 +18,20 @@ const OverviewTable = ({ data, isHomePage }) => {
   }
 
   /**
-   * Renders a table cell with clickable link for department names on the homepage.
+  
    * @param {string} value - The cell value.
    * @returns {React.ReactElement} A table cell element.
    */
   const renderDepartmentCell = (value) => {
-    const departmentToPathMap = {
-      'Sales': '/Sales',
-      'Marketing': '/Marketing',
-      'Customer Service': '/CustomerService'
-    };
+    // const departmentToPathMap = {
+    //   'Sales': '/Sales',
+    //   'Marketing': '/Marketing',
+    //   'Customer Service': '/CustomerService'
+    // };
   
     // If it's the home page, render department names as clickable links
     if (isHomePage) {
-      return <Link to={departmentToPathMap[value]}>{value}</Link>;
+      return <div>{value}</div>//<Link to={departmentToPathMap[value]}>{value}</Link>;
     }
     return value;
   };

@@ -35,15 +35,16 @@ const TurnoverOverTimeChart = ({ data, metadata }) => {
       <ResponsiveContainer width="80%" height={300}>
         <LineChart data={data} >
           {/* X and Y axis with labels from metadata */}
-          <XAxis dataKey="date" height={20}>
-            {metadata?.x_label && <Label value={metadata.x_label} position="insideBottom" fill='black' offset={-15} fontSize={12} fontWeight="bold"/>}
+          <XAxis dataKey="date" height={55} interval={0} angle={80} dy={40}      // Moves the labels down
+            tick={{ fill: 'black' }}>
+            {metadata?.x_label && <Label value={metadata.x_label} position="insideBottom" fill='black' offset={-50} fontSize={14} fontWeight="bold"/>}
           </XAxis>
           <YAxis >
-            {metadata?.y_label && <Label value={metadata.y_label} angle={-90} position="insideLeft" fill='black' fontSize={12} fontWeight="bold"/>}
+            {metadata?.y_label && <Label value={metadata.y_label} angle={-90} position="insideLeft" fill='black' fontSize={14} fontWeight="bold"/>}
           </YAxis>
           <Tooltip content={<CustomTooltip />} />
     
-          <Legend content={CustomLegend} wrapperStyle={{ position: 'relative', marginTop: '-50px', marginLeft: '-25px' }}/>
+          <Legend content={CustomLegend} wrapperStyle={{ position: 'relative', marginTop: '-50px', marginLeft: '-65px' }}/>
           
           {/* Mapping each data key to a Line component */}
           {dataKeys.map((key, index) => (

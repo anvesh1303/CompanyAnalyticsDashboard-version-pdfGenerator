@@ -1,6 +1,6 @@
 // App.js
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+//import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import HeaderTable from './components/headertable/HeaderTable';
 import OverviewTable from './components/overviewtable/OverviewTable';
 import TenureComparisonChart from './components/charts/TenureComparisonChart';
@@ -15,14 +15,16 @@ import data01 from './data/01.json';
 import data02 from './data/02.json';
 import data03 from './data/03.json';
 
-function App() {
+
+function App({currentPath}) {
+  console.log(currentPath)
   // State hooks for managing data
   const [headerData, setHeaderData] = useState([]);
   const [overviewData, setOverviewData] = useState([]);
   const [tenureComparison, setTenureComparison] = useState({ data: [], metadata: {} });
   const [turnoverOverTime, setTurnoverOverTime] = useState({ data: [], metadata: {} });
   const [pageHeader, setPageHeader] = useState('');
-  const location = useLocation();
+  //const location = useLocation();
 
   // Effect hook to update component state based on current URL
   useEffect(() => {
@@ -33,7 +35,7 @@ function App() {
       '/CustomerService': data03
     };
     // Fetching data based on the current page route
-    const sectionData = departmentMap[location.pathname] || data00;
+    const sectionData = departmentMap[currentPath] || data00;
 
     // Setting state with the fetched data
     setHeaderData(sectionData.headerTable);
@@ -47,24 +49,21 @@ function App() {
       metadata: sectionData.turnoverOverTime.metadata,
     });
     setPageHeader(sectionData.pageHeader);
-  }, [location.pathname]);
+  }, [currentPath]);
+
+  // Determine if it's the home page
+  const isHomePage = currentPath === '/';
 
   return (
-    <div className="App">
-      {/* Page header component */}
-      <PageHeader title={pageHeader} isHomePage={location.pathname === '/'} />
-      {/* Container for the HeaderTable component */}
+    <div className="App" id='app-container'>
+      <PageHeader title={pageHeader} isHomePage={isHomePage} />
       <div className="table-container">
         <HeaderTable data={headerData} />
       </div>
-      {/* Routing container for OverviewTable component */}
       <div className="table-container">
-        <Routes>
-          <Route path="/" element={<OverviewTable data={overviewData} isHomePage={location.pathname === '/'} />} />
-          <Route path="/:departmentId" element={<OverviewTable data={overviewData} />} />
-        </Routes>
+        {/* Render OverviewTable based on currentPath */}
+        <OverviewTable data={overviewData} isHomePage={isHomePage} />
       </div>
-      {/* Container for the chart components */}
       <div className="charts-container">
         <TurnoverOverTimeChart data={turnoverOverTime.data} metadata={turnoverOverTime.metadata} />
         <TenureComparisonChart data={tenureComparison.data} metadata={tenureComparison.metadata} />
@@ -73,11 +72,4 @@ function App() {
   );
 }
 
-// Wrapping App component with Router for URL management
-export default function WrappedApp() {
-  return (
-    <Router>
-      <App />
-    </Router>
-  );
-}
+export default App;

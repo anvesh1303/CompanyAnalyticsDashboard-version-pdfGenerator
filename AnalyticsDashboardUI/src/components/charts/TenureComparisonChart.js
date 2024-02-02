@@ -17,6 +17,7 @@ import {
  * The chart is oriented vertically, with custom colors and size for bars.
  */
 const TenureComparisonChart = ({ data, metadata }) => {
+  console.log(data)
   // Define colors for the bars
   const midnightBlue = '#003366';
   const burntOrange = '#CC5500';
@@ -34,7 +35,7 @@ const TenureComparisonChart = ({ data, metadata }) => {
           margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
         >
           {/* X and Y axis with labels from metadata */}
-          <XAxis type="number">
+          <XAxis type="number" height={35}>
             {metadata?.x_label && <Label value={metadata.x_label} position="insideBottom" offset={-15} fill={'black'} fontSize={12} fontWeight="bold"/>}
           </XAxis>
           <YAxis width={80} type="category" dataKey="name">
